@@ -1,0 +1,100 @@
+avatar: /images/123.png
+background: # 既是博客的背景，又是文章默认头图
+    path: /images/bg1.jpg
+    width: 1464
+    height: 412
+favicon:
+  href: /favicon.ico # 网站图标
+  type: image/x-icon # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+
+function: # 功能开关，可选值（true,false）
+  globalToc: true # 开启该功能会自动开启文章 TOC（文章目录） 功能
+  wordCount: false # 是否开启文章字数统计 (true, false)
+  copyCode: true # 是否允许复制代码块
+
+imageCDN: # 图片 CDN 功能
+  enable: false # 开启该功能  
+  origin: /../../images/ # 图片原始目录
+  to: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/ # 图片 CDN 域名
+
+# 自定义样式，启用后可在站点的source文件夹下新建custom.css自定义站点样式
+customStyles:
+  - custom.css
+  
+# 附加图标库 使用说明：https://docs.nexmoe.com/config/icon
+iconlib: # //at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css
+
+menu:
+    回到首頁:
+        - /
+        - icon-home
+    文章歸檔:
+        - /archives        # 去掉 .html，這是 Hexo 預設路徑
+        - icon-container
+    關於我:              # 新增這個
+        - /about
+        - icon-info-circle
+    我的朋友:
+        - /PY             # 去掉 .html
+        - icon-team
+
+widgets:
+    - name: search
+      enable: true
+      options: 
+        search: 
+            type: local  # 1. 將 engine 改為 local
+            url: /search.xml # 2. 指向本地索引文件
+    - name: social
+      enable: true
+      options: 
+        social:
+            GitHub:
+                - https://github.com/你的帳號  # 修改為你的
+                - icon-github
+                - rgb(25, 23, 23)
+                - rgba(25, 23, 23, .1)
+            # 不需要其他的就直接刪除
+    - name: category
+      enable: true
+    - name: tagcloud
+      enable: true
+      options: 
+        maxTagcloud: 17 
+    - name: hitokoto # 如果想看隨機名言，可以改 true
+      enable: false
+      options: 
+        widgetHitokoto:
+            loading_placeholder: '載入中...'
+            loading_error_placeholder: '載入失敗...'
+    - name: archive
+      enable: true
+      options:
+        widgetAchive:
+            archive_type: 'year'
+            show_count: true 
+    - name: recent_posts # 最近文章
+      enable: true
+    - name: link # 友情連結
+      enable: false # 如果你目前沒人可以連，建議先設為 false 關閉它
+      options: 
+        widgetLink:
+            - title: 我的另一個網站
+              img: https://example.com/image.png
+              link : https://example.com/
+
+copyTip: "著作权归作者所有。\n商业转载请联系作者获得授权，非商业转载请注明出处。\n来源：%url" # 自定义复制版权文案,使用 %url 代替当前页面URL, 修改为false禁用
+
+# 清空 Google Analytics (除非你有自己的 ID)
+slotHead: | 
+
+# 清空廣告
+slotFooter: | 
+
+# 清空備案資訊與贊助商 Logo
+slotSidebar: |
+  <br>這是我的個人部落格
+
+# 調整版權聲明 (改為你的名字)
+slotCopyright: | 
+  <strong>版權聲明：</strong>本文採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 協議進行許可

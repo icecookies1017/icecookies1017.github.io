@@ -1,0 +1,107 @@
+.keyword { color: #ff5722 !important; font-weight: bold; }
+.search-result { border-bottom: 1px solid #eee; padding: 10px; }
+
+.nexmoe-widget.nexmoe-search form {
+    position: relative !important;
+}
+
+/* 搜尋結果容器 */
+.local-search-dropdown {
+    display: none;
+    position: absolute !important;
+    top: calc(100% + 5px) !important; /* 距離輸入框下方 5px */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 10000;
+    
+    /* 邊框與圓角 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* 圓角更明顯 */
+    
+    /* 陰影更柔和 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    max-height: 350px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+/* 每一項結果 */
+.search-item {
+    display: block !important;
+    padding: 12px 16px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background-color: #f7f7f7 !important;
+    color: #ff5722 !important; /* 滑鼠移過時文字變色，可自選主題色 */
+}
+
+.search-item.no-result {
+    color: #999 !important;
+    text-align: center;
+}
+
+/* 讓搜尋框保持圓角上部 */
+#search_value:focus {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.nexmoe-drawer, .nexmoe-widget-wrap, .nexmoe-widget {
+    overflow: visible !important;
+}
+
+.local-search-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+.local-search-dropdown::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.search-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.search-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.search-tag-span {
+    font-size: 11px;
+    background: #f0f0f0;
+    color: #666;
+    padding: 1px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.search-item:hover .search-tag-span {
+    background: #ffebe5;
+    color: #ff5722;
+}
+
+.search-keyword {
+    color: #ff5722 !important; /* 這裡設定你想變成的顏色，例如橘紅色 */
+    font-weight: bold;        /* 加粗顯示 */
+    background-color: rgba(255, 87, 34, 0.1); /* 可選：加一個極淡的背景色讓它更顯眼 */
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.search-tag-span .search-keyword {
+    background-color: transparent; /* 標籤內不需要額外背景 */
+    color: #ff5722 !important;
+}
