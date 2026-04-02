@@ -4,22 +4,8 @@ date: 2026-01-16
 cover: /images/bg1.jpg
 ---
 
-<div class="friend-wrap">
-  <a class="friend-item" href="https://www.yilin0121.com" target="_blank" rel="noopener noreferrer">
-    <div class="friend-avatar"><img src="/images/friend-yilin.webp" alt="郭10" loading="lazy"></div>
-    <div class="friend-info">
-      <div class="friend-name">郭10</div>
-      <div class="friend-desc">觀念考不到5級的115特選生</div>
-    </div>
-  </a>
-  <a class="friend-item" href="https://wyyyyy812-tech.github.io" target="_blank" rel="noopener noreferrer">
-    <div class="friend-avatar"><img src="/images/friend-wy.webp" alt="wy" loading="lazy"></div>
-    <div class="friend-info">
-      <div class="friend-name">wy</div>
-      <div class="friend-desc">可愛小男娘一枚</div>
-    </div>
-  </a>
-</div>
+## 朋友們
+{% friendsLink PY/_data.yml %}
 
 ---
 
