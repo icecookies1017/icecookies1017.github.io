@@ -9,13 +9,13 @@ cover: /images/bg1.jpg
 
 ---
 
-## 本站信息
+## 本站資訊
 
 ```yml
 - name: 雪餅
   url: https://icecookies1017.github.io/
-  desc: 雪餅的blog
-  image: https://icecookies1017.github.io/images/123.png
+  desc: 什麼都不會的雪餅
+  image: https://icecookies1017.github.io/images/icecookies.png
 ```
 
 ## 申請方式
