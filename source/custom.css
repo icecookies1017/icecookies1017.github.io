@@ -373,13 +373,20 @@ html.dark-mode .nexmoe-toc {
 }
 html.dark-mode .nexmoe-primary,
 html.dark-mode .nexmoe-post-container {
-    background: transparent !important; border: none !important; box-shadow: none !important;
+    background-color: rgba(35,35,35,0.8) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.03) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    border-radius: var(--radius) !important;
 }
 html.dark-mode .nexmoe-post {
-    background-color: rgba(35,35,35,0.8) !important; backdrop-filter: blur(15px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-    border: 1px solid rgba(255,255,255,0.03) !important; border-bottom: none !important;
-    border-radius: var(--radius) var(--radius) 0 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+html.dark-mode .nexmoe-post-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 html.dark-mode .comments,
 html.dark-mode #giscus-container,
@@ -389,6 +396,14 @@ html.dark-mode .nexmoe-post-footer {
     border: 1px solid rgba(255,255,255,0.03) !important;
     border-top: 1px solid rgba(255,255,255,0.05) !important;
     border-radius: 0 0 var(--radius) var(--radius) !important;
+}
+/* ===== FIX: 只讓文章變寬 ===== */
+html.dark-mode .nexmoe-post {
+    max-width: none !important;
+    width: 100% !important;
+}
+html.dark-mode .nexmoe-post-container {
+    max-width: none !important;
 }
 html.dark-mode body, html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
 html.dark-mode h4, html.dark-mode h5, html.dark-mode h6,
@@ -420,3 +435,19 @@ html.dark-mode .archive-list-count { color: #aaa !important; }
 html.dark-mode .mdui-fab { background-color: rgba(35,35,35,0.9) !important; color: #fff !important; }
 html.dark-mode .nexmoe-archives .tagcloud a { color: rgba(255,255,255,0.85) !important; }
 html.dark-mode .nexmoe-post-cover h1 { color: #fff !important; }
+html.dark-mode .nexmoe-post {
+    max-width: 900px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+/* ===== FORCE 全部撐寬 ===== */
+html.dark-mode .nexmoe-primary,
+html.dark-mode .nexmoe-post-container {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* 讓文章卡片跟留言一樣寬 */
+html.dark-mode .nexmoe-post {
+    width: 100% !important;
+}
