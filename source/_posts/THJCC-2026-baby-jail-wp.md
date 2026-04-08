@@ -1,7 +1,9 @@
 ---
 title: THJCC 2026 baby_jail wp
 date: 2026-02-24 14:36:05
-tags: write up
+tags: 
+  - write up
+cover: /images/bg1.jpg
 ---
 ## THJCC 2026 baby_jail wp
 ## 前言
